@@ -26,6 +26,7 @@ public class PlatformMove : MonoBehaviour
 
         [Tooltip("Whether the platform is headed towards point A or point B.")]
         public bool forth;
+        
     }
     void Update()
     {

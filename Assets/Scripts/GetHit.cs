@@ -60,9 +60,16 @@ public class GetHit : MonoBehaviour
     private void TakeDamage()
     {
         hurt = true;
+        playerMovementScript.playerStats.health--;
+        Debug.Log("Got hit " + playerMovementScript.playerStats.health);
         playerMovementScript.playerStats.canMove = false;
         playerMovementScript.soundManager.PlayHitSound();
         StartCoroutine("Recover");
+
+        if (playerMovementScript.playerStats.health <= 0)
+        {
+            Debug.Log("Game Over");
+        }
     }
     private IEnumerator Recover()
     {

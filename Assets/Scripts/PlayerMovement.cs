@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
         [Tooltip("When the player is allowed to jump or not.")]
         public bool canJump;
+        
+        [Tooltip("How much health the player has.")]
+        public int health;
     }
     
     public Stats playerStats;
