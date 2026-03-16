@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Start()
     {
+        mainCamera = FindObjectOfType<Camera>().transform; 
         rb = GetComponent<Rigidbody>();
     }
 
